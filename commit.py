@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Increment ./state and commit the next days.
 
@@ -34,8 +34,8 @@ def commit_day(when):
 
 if __name__ == '__main__':
     when = read_state()
-    print 'commiting %i days starting %s' % (DAYS, when)
+    print('commiting %i days starting %s' % (DAYS, when))
     for d in range(DAYS):
         when += timedelta(days=1)
         commit_day(when)
-    print 'done: committed up to %s' % when
+    print('done: committed up to %s' % when)
